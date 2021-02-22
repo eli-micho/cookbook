@@ -1,0 +1,21 @@
+.categoryCard {
+    max-width: 75px;
+    max-height: 75px;
+
+    .categoryLink {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        cursor: pointer;
+
+        img {
+            max-height: 100px;
+            max-width: 100px;
+            border-radius: 50%;
+        }
+
+        span {
+            font-size: 13px;
+        }
+    }
+}
