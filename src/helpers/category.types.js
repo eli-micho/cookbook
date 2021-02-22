@@ -1,10 +1,10 @@
-import airfryer from './../assets/imgs/airfryer.jpeg';
-import appetizers from './../assets/imgs/appetizers.jpeg';
-import breakfast from './../assets/imgs/breakfast.jpeg';
-import chicken from './../assets/imgs/chicken.jpeg';
-import cookies from './../assets/imgs/cookies.jpeg';
-import instantpot from './../assets/imgs/instantpot.jpeg';
-import quickandeasy from './../assets/imgs/quickandeasy.jpeg';
+import airfryer from './../assets/imgs/category_icons/airfryer.jpeg';
+import appetizers from './../assets/imgs/category_icons/appetizers.jpeg';
+import breakfast from './../assets/imgs/category_icons/breakfast.jpeg';
+import chicken from './../assets/imgs/category_icons/chicken.jpeg';
+import cookies from './../assets/imgs/category_icons/cookies.jpeg';
+import instantpot from './../assets/imgs/category_icons/instantpot.jpeg';
+import quickandeasy from './../assets/imgs/category_icons/quickandeasy.jpeg';
 
 const categoryTypes = [
     {

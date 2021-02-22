@@ -1,0 +1,23 @@
+.mainFContent {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        max-width: 595px;
+        max-height: 395px;
+    }
+
+    .mainFContentText {
+        h2 {
+            font-family: 'RocknRoll One', sans-serif;
+
+            &:hover {
+                text-decoration: underline;
+                text-decoration-color: #d54215;
+                text-underline-position: under;
+            }
+        }
+    }
+}

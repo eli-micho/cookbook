@@ -1,0 +1,33 @@
+.rightFContent {
+    max-width: 274px;
+    max-height: 100%;
+    margin-left: 50px;
+    padding: 17px 14px 0 14px;
+    border: 1px solid rgba(0,0,0,0.15);
+    
+    h2 {
+        font-family: 'RocknRoll One', sans-serif;
+        text-align: center;
+    }
+    .contentList {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+
+
+        :last-child {
+            margin: 0;
+        }
+
+        li {
+            font-size: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            img {
+                padding-right: 12px;
+            }
+        }
+    }
+}
