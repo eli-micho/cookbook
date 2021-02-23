@@ -10,7 +10,7 @@ const RecipeSubNav = () => {
         <div className="recipeSubNav">
             <div className="subheader">
                 <div className="subSearchIngredient">
-                        <a>Search by ingredient</a>
+                        <a href="#">Search by ingredient</a>
                 </div>
                 
                 <div className="categoryCards">

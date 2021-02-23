@@ -8,16 +8,34 @@
 
     .subheader {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        max-width: 1100px;
-        border: 1px solid;
+        flex-grow: 1;
+        max-width: 1240px;
+
+        div {
+            padding: 0 50px;
+        }
+
+        .subSearchIngredient {
+            a {
+                text-underline-position: under;
+                text-transform: uppercase;
+                color: inherit;
+            }    
+        }
 
         .categoryCards {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            
             ul {
+                margin: 0;
                 display: flex;
                 list-style-type: none;
                 li {
-                    margin: 5px 10px;
+                    margin: 5px 12px;
                 }
             }
         }
