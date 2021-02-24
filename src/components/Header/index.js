@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 const Header = () => {
+    const toggleDropDown = () => {
+        const dropdown = document.querySelector('.dropDownContent');
+        dropdown.classList.toggle('show');
+        
+    };
+
     return(
         <header className="header">
             <div className="subheader">
@@ -24,17 +30,17 @@ const Header = () => {
                 <div className="search">
                     <label htmlFor="search">Search </label>
                     <input type="text" id="search" name="search" placeholder="Find a Recipe" />
-                    <button><i class="fa fa-search"></i></button>
+                    <button><i className="fa fa-search"></i></button>
                 </div>
 
                 <div className="userCTA">
-                    <a href="#" className="joinNowCTA">
+                    <span className="joinNowCTA">
                         <i className="fa fa-user"></i>
-                        <span>Join Now</span>
+                        <span className="joinBtn" onClick={toggleDropDown}>Join Now</span>
                         <JoinNowMenu />
-                    </a>
+                    </span>
 
-                    <Link to="/">
+                    <Link to="/signin">
                         <span>Login</span>
                     </Link>
                 </div>

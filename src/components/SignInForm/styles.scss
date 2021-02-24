@@ -1,0 +1,27 @@
+.signInContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1270px;
+    background-color: #fff;
+
+    .signInForm {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            color: #999;
+            font-size: 23px;
+        }
+
+        div {
+            margin: 20px 0;
+        }
+
+        input[type=button] {
+            flex-basis: 50%;
+        }
+    }
+}

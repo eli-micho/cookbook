@@ -1,5 +1,33 @@
 .dropDownContent {
     display: none;
     position: absolute;
-    min-width: 160px;
+    top: calc(100% + 15px) ;
+    z-index: 1;
+
+    min-width: fit-content;
+    max-width: 280px;
+    background-color: #fff;
+    box-shadow: 0 3px 9px 0 rgb(0, 0, 0.15);
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        li {
+            padding-top: 5px;
+            padding-left: 10px;
+        }
+    }
+
+    .dropDownSubheader {
+        font-size: 12px;
+        line-height: 16px;
+        margin: 8px 0;
+        padding: 0 16px;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.65);
+    }
 }

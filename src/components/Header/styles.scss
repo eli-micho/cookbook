@@ -45,8 +45,8 @@
         }
 
         .logo {
-            font-family: 'RocknRoll One', sans-serif;
             span {
+                font-family: 'RocknRoll One', sans-serif;
                 font-size: 25px;
                 color: #d54215;
             }
@@ -79,22 +79,25 @@
         }
         
         .userCTA {
+            position: relative;
+
             i {
                 margin-right: 10px;    
-            }
-
-            a {
-                padding: 0 10px;
-                border-right: 1px solid #e1dfdd;
-                color: inherit
             }
 
             :last-child {
                 border: none;
             }
 
-            .joinNowCTA {
+            .joinNowCTA, a {
+                padding: 0 10px;
+                border-right: 1px solid #e1dfdd;
+                color: inherit;
+                cursor: pointer;
                 
+                .show{
+                    display: block;
+                }
             }
         }
     }
