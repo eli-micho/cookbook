@@ -5,13 +5,13 @@ import RecipeSubNav from './../../components/RecipeSubNav';
 import './styles.scss';
 
 class Homepage extends Component {
-    componentDidMount() {
+    /* componentDidMount() {
         window.addEventListener('click', this.handleClick)
     };
 
     componentWillUnmount() {
         window.removeEventListener('click', this.handleClick)
-    };
+    }; */
 
     handleClick(e) {
         if(!e.target.matches('.joinBtn')){

@@ -1,9 +1,12 @@
 import React from 'react';
 import JoinNowMenu from './JoinNowMenu';
 import { Link } from 'react-router-dom';
+import { auth } from './../../firebase/utils';
 import './styles.scss';
 
-const Header = () => {
+const Header = (props) => {
+    const { currentUser } = props;
+
     const toggleDropDown = () => {
         const dropdown = document.querySelector('.dropDownContent');
         dropdown.classList.toggle('show');
@@ -34,20 +37,35 @@ const Header = () => {
                 </div>
 
                 <div className="userCTA">
-                    <span className="joinNowCTA">
+                    {currentUser && (
+                        <div>
+                            <span>You are logged in</span>
+                            <span onClick={() => auth.signOut()}>Log Out</span>
+                        </div>
+                    )}
+                    
+                    {!currentUser && (
+                        <div>
+                        <span className="joinNowCTA">
                         <i className="fa fa-user"></i>
                         <span className="joinBtn" onClick={toggleDropDown}>Join Now</span>
                         <JoinNowMenu />
-                    </span>
+                        </span>
 
-                    <Link to="/signin">
-                        <span>Login</span>
-                    </Link>
+                        <Link to="/signin">
+                            <span>Login</span>
+                        </Link>
+                        </div>
+                    )}
                 </div>
             </div>
             
         </header>
     );
+};
+
+Header.defaultProps = {
+    currentUser: null
 };
 
 export default Header;

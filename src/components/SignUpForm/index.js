@@ -6,8 +6,7 @@ const SignUpForm = () => {
         <div className="signUpContent">
             <form className="signUpForm">
                 <div className="socialSignUp">
-                    <h3>Sign Up With Social</h3>
-                    <button><i className="fa fa-facebook"></i>Facebook</button>
+                    <h3>Sign Up With Google</h3>
                     <button><i className="fa fa-google"></i>Google</button>
                 </div>
 

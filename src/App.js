@@ -1,6 +1,8 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { auth } from './firebase/utils';
 import './default.scss';
+
 //Components
 
 //Layouts
@@ -12,30 +14,65 @@ import Homepage from './pages/Homepage';
 import SignUp from './pages/Account/SignUp';
 import SignIn from './pages/Account/SignIn';
 
-function App() {
-  return (
-    <div className="App">
-      <Switch>
-        <Route exact path="/" render={() => (
-          <HomepageLayout>
-            <Homepage />
-          </HomepageLayout>
-        )} />
+const initialState = {
+  currentUser: null
+};
 
-        <Route exact path="/signup" render={() => (
-          <AccountPageLayout>
-            <SignUp />
-          </AccountPageLayout>
-        )} />
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ...initialState
+    };
+  }
 
-        <Route exact path="/signin" render={() => (
-          <AccountPageLayout>
-            <SignIn />
-          </AccountPageLayout>
-        )} />
-      </Switch>
-    </div>
-  );
-}
+  authListener = null;
+
+  componentDidMount() {
+    this.authListener = auth.onAuthStateChanged(userAuth => {
+      if (!userAuth) {
+        this.setState({
+          ...initialState
+        });
+      }
+
+      this.setState({
+        currentUser: userAuth
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.authListener();
+  }
+
+  render() {
+    const { currentUser } = this.state;
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path="/" render={() => (
+            <HomepageLayout currentUser={currentUser}>
+              <Homepage />
+            </HomepageLayout>
+          )} />
+  
+          <Route exact path="/signup" render={() => (
+            <AccountPageLayout>
+              <SignUp />
+            </AccountPageLayout>
+          )} />
+  
+          <Route exact path="/signin" 
+            render={() => currentUser ? <Redirect to="/" /> : (
+            <AccountPageLayout>
+              <SignIn />
+            </AccountPageLayout>
+          )} />
+        </Switch>
+      </div>
+    );
+  }
+};
 
 export default App;
