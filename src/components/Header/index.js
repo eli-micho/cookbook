@@ -38,23 +38,23 @@ const Header = (props) => {
 
                 <div className="userCTA">
                     {currentUser && (
-                        <div>
-                            <span>You are logged in</span>
+                        <div className="currentUserCTA">
+                            <span>{currentUser.displayName}</span>
                             <span onClick={() => auth.signOut()}>Log Out</span>
                         </div>
                     )}
                     
                     {!currentUser && (
                         <div>
-                        <span className="joinNowCTA">
-                        <i className="fa fa-user"></i>
-                        <span className="joinBtn" onClick={toggleDropDown}>Join Now</span>
-                        <JoinNowMenu />
-                        </span>
+                            <span className="joinNowCTA">
+                            <i className="fa fa-user"></i>
+                            <span className="joinBtn" onClick={toggleDropDown}>Join Now</span>
+                                <JoinNowMenu />
+                            </span>
 
-                        <Link to="/signin">
-                            <span>Login</span>
-                        </Link>
+                            <Link to="/signin">
+                                <span>Login</span>
+                            </Link>
                         </div>
                     )}
                 </div>

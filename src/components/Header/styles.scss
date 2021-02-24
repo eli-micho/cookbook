@@ -80,6 +80,20 @@
         
         .userCTA {
             position: relative;
+            
+            .currentUserCTA {
+
+                span{
+                    padding: 0 10px;
+                    border-right: 1px solid #e1dfdd;
+                    color: inherit;
+                    cursor: pointer;
+                }
+                :last-child {
+                    border: none;
+                }
+
+            }
 
             i {
                 margin-right: 10px;    

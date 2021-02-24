@@ -7,21 +7,39 @@
     max-width: 1270px;
     background-color: #fff;
 
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 450px;
+
+        h3 {
+            color: #4D4D4D;
+            font-size: 26px;
+            font-weight: 300;
+        }
+        
+        &:last-child {
+            margin-top: 7px;
+        }
+    }
+
     .signUpForm {
         display: flex;
         flex-direction: column;
 
-        h3 {
-            color: #999;
-            font-size: 23px;
+        .pwdSub {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
         }
 
-        div {
-            margin: 20px 0;
-        }
+        .ageConsentWrap {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 14px;
 
-        input[type=button] {
-            flex-basis: 50%;
+            
         }
     }
 }
