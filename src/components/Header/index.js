@@ -39,7 +39,9 @@ const Header = (props) => {
                 <div className="userCTA">
                     {currentUser && (
                         <div className="currentUserCTA">
-                            <span>{currentUser.displayName}</span>
+                            <Link to="/profile">
+                                <span>{currentUser.displayName}</span>
+                            </Link>
                             <span onClick={() => auth.signOut()}>Log Out</span>
                         </div>
                     )}
@@ -48,8 +50,9 @@ const Header = (props) => {
                         <div>
                             <span className="joinNowCTA">
                             <i className="fa fa-user"></i>
-                            <span className="joinBtn" onClick={toggleDropDown}>Join Now</span>
-                                <JoinNowMenu />
+                            <Link to="/signup">
+                                <span className="joinBtn">Join Now</span>
+                            </Link>
                             </span>
 
                             <Link to="/signin">

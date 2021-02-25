@@ -36,9 +36,12 @@
 
         .ageConsentWrap {
             display: flex;
-            justify-content: flex-start;
-            font-size: 14px;
+            justify-content: space-between;
+            align-items: center;
 
+            input[type=radio] {
+            margin-right: 20px;
+            }
             
         }
     }

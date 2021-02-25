@@ -99,7 +99,7 @@ class SignUpForm extends Component {
                             </div>
                             <div className="ageConsentWrap">
                                 <input type="radio" id="ageConsent" name="ageConsent" />
-                                <label for="ageConsent">I am 13 years of age or older and </label>
+                                <label for="ageConsent">I am 13 years of age or older and agree to the Terms of Service and Privacy Policy.</label>
                             </div>
 
                             <AccountButton type="submit">

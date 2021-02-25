@@ -5,9 +5,9 @@ const RightFContent = (props) => {
     const content = props.content[2]
 
     const renderContent =
-        content.map(article => { 
+        content.map((article, index) => { 
             return (
-                <li>
+                <li key={index}>
                     <img src={article.img} />
                     <span>{article.title}</span>
                 </li>

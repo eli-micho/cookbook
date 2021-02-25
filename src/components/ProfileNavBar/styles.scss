@@ -1,0 +1,29 @@
+.profileNavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-height: 75px;
+    background-color: #fff;
+
+    .logo {
+        color: #d54215;
+        padding-left: 20px;
+        font-family: 'RocknRoll One', sans-serif;
+        font-size: 22px;
+
+        i {
+            color: rgb(247, 175, 49);
+        }
+    }
+
+    .browse {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 29px;
+        background: #f2f2f2;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}

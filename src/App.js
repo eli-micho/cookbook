@@ -13,6 +13,7 @@ import AccountPageLayout from './layouts/AccountPageLayout';
 import Homepage from './pages/Homepage';
 import SignUp from './pages/Account/SignUp';
 import SignIn from './pages/Account/SignIn';
+import Profile from './pages/Profile';
 
 const initialState = {
   currentUser: null
@@ -74,6 +75,18 @@ class App extends Component {
               <SignIn />
             </AccountPageLayout>
           )} />
+
+          <Route exact path="/profile" 
+            render={() => currentUser ? (
+            <AccountPageLayout>
+              <Profile />
+            </AccountPageLayout> ):
+            (
+            <AccountPageLayout>
+              <SignUp />
+            </AccountPageLayout>
+          )} />
+
         </Switch>
       </div>
     );
