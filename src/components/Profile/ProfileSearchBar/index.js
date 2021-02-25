@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import AccountInput from '../Forms/AccountInput';
+import AccountInput from '../../Forms/AccountInput';
 import './styles.scss';
 
-class ProfileNavBar extends Component {
+class ProfileSearchBar extends Component {
     constructor(props){
         super(props)
         
@@ -10,23 +10,23 @@ class ProfileNavBar extends Component {
 
     render(){
         return(
-            <div className="profileNavBar">
+            <div className="profileSearchBar">
                 <span className="logo">justrecipes<i className="fa fa-utensils"></i></span>
-                <span className="browse">Browse <i class="fas fa-chevron-down"></i></span>
+                <span className="browse">Browse <i className="fas fa-chevron-down"></i></span>
 
                 <div className="searchBox">
                     <input type="text" name="searchInput" placeholder="Find a recipe" />
-                    <i class="fas fa-search"></i>
+                    <i className="fas fa-search"></i>
                 </div>
                 
-                <div>
+                <div className="userActions">
                     <ul>
-                        <li><i class="fas fa-bell"></i></li>
-                        <li><i class="fas fa-heart"></i></li>
+                        <li><i className="fas fa-bell"></i></li>
+                        <li><i className="fas fa-heart"></i></li>
                     </ul>
                 </div>
 
-                <div>
+                <div className="userProfileBtn">
                     <span className="userIcon">Icon</span>
                     <span>Display Name</span>
                     <span></span>
@@ -36,4 +36,4 @@ class ProfileNavBar extends Component {
     };
 };
 
-export default ProfileNavBar;
+export default ProfileSearchBar;

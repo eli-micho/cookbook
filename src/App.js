@@ -13,7 +13,13 @@ import AccountPageLayout from './layouts/AccountPageLayout';
 import Homepage from './pages/Homepage';
 import SignUp from './pages/Account/SignUp';
 import SignIn from './pages/Account/SignIn';
-import Profile from './pages/Profile';
+import AboutMe from './pages/Profile/AboutMe';
+import Favourites from './pages/Profile/Favourites';
+import Friends from './pages/Profile/Friends';
+import MadeIt from './pages/Profile/IMadeIt';
+import MyPhotos from './pages/Profile/MyPhotos';
+import MyReviews from './pages/Profile/MyReviews';
+import PersonalRecipes from './pages/Profile/PersonalRecipes';
 
 const initialState = {
   currentUser: null
@@ -76,10 +82,76 @@ class App extends Component {
             </AccountPageLayout>
           )} />
 
-          <Route exact path="/profile" 
+          <Route exact path="/profile/about-me" 
             render={() => currentUser ? (
             <AccountPageLayout>
-              <Profile />
+              <AboutMe />
+            </AccountPageLayout> ):
+            (
+            <AccountPageLayout>
+              <SignUp />
+            </AccountPageLayout>
+          )} />
+
+          <Route exact path="/profile/favourites" 
+            render={() => currentUser ? (
+            <AccountPageLayout>
+              <Favourites />
+            </AccountPageLayout> ):
+            (
+            <AccountPageLayout>
+              <SignUp />
+            </AccountPageLayout>
+          )} />
+
+          <Route exact path="/profile/friends" 
+            render={() => currentUser ? (
+            <AccountPageLayout>
+              <Friends />
+            </AccountPageLayout> ):
+            (
+            <AccountPageLayout>
+              <SignUp />
+            </AccountPageLayout>
+          )} />
+
+          <Route exact path="/profile/made-it" 
+            render={() => currentUser ? (
+            <AccountPageLayout>
+              <MadeIt />
+            </AccountPageLayout> ):
+            (
+            <AccountPageLayout>
+              <SignUp />
+            </AccountPageLayout>
+          )} />
+
+          <Route exact path="/profile/my-photos" 
+            render={() => currentUser ? (
+            <AccountPageLayout>
+              <MyPhotos />
+            </AccountPageLayout> ):
+            (
+            <AccountPageLayout>
+              <SignUp />
+            </AccountPageLayout>
+          )} />
+
+          <Route exact path="/profile/my-reviews" 
+            render={() => currentUser ? (
+            <AccountPageLayout>
+              <MyReviews />
+            </AccountPageLayout> ):
+            (
+            <AccountPageLayout>
+              <SignUp />
+            </AccountPageLayout>
+          )} />
+
+          <Route exact path="/profile/my-recipes" 
+            render={() => currentUser ? (
+            <AccountPageLayout>
+              <PersonalRecipes/>
             </AccountPageLayout> ):
             (
             <AccountPageLayout>

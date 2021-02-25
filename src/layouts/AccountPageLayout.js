@@ -4,8 +4,12 @@ import Footer from './../components/Footer';
 const AccountPageLayout = (props) => {
     return(
         <div>
-            {props.children}
-            <Footer/>
+            <div className="profile">
+                <div className="main">
+                    {props.children}
+                </div>
+            </div>
+            {/* <Footer/> */}
         </div>
     );
 };

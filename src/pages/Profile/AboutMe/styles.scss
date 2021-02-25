@@ -1,0 +1,33 @@
+.aboutMeActions {
+    ul {
+        list-style-type: none;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+
+            span {
+                color: #4d4d4d;;
+                font-size: 18px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #f57e23;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.profileBtn {
+    color: white;
+    background-color: #feaa26;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding: 20px;
+    display: block;
+    width: 250px;
+}

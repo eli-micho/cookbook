@@ -39,7 +39,7 @@ const Header = (props) => {
                 <div className="userCTA">
                     {currentUser && (
                         <div className="currentUserCTA">
-                            <Link to="/profile">
+                            <Link to="/profile/about-me">
                                 <span>{currentUser.displayName}</span>
                             </Link>
                             <span onClick={() => auth.signOut()}>Log Out</span>
