@@ -1,0 +1,83 @@
+.friendsNav {
+    margin-bottom: 25px;
+    ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+
+        li {
+            text-align: center;
+            width: 165px;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 0 38px 10px;
+            border-bottom: 1px solid #E5E5E5;
+            background-color: #fff;
+            color: #b3b3b3;
+            font-weight: 300;
+        }
+    }
+}
+
+.suggestedContent {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    span {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+
+        li {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 0 0 2px 1px #f2f2f2;
+            border: solid 1px #f2f2f2;
+            width: 300px;
+
+            img {
+                display: inline;
+                float: left;
+                width: 90px;
+                height: 90px;
+                margin-right: 10px;
+            }
+            .contentTitle {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            button {
+                background-color: #f2f2f2;
+                border: none;
+                width: 128px;
+                height: 37px;
+                margin-top: 10px;
+            }
+        }
+
+    }
+}
+
+.facebookConnect {
+    .facebookText {
+        margin-bottom: 15px;
+        span {
+            font-size: 13px;
+        }
+    }
+
+    button {
+        background-color: #f2f2f2;
+        border: none;
+        width: 220px;
+        height: 60px;
+        margin-top: 10px;  
+    }
+}

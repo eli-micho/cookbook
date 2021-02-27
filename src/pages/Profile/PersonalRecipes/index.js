@@ -8,8 +8,11 @@ const PersonalRecipes = () => {
     return(
         <div>
             <ProfileControlPanel/>
-            <div className="aboutMe">
-                Personal Recipes
+            <div className="wrap">
+                <div className="textContent">
+                    <h3>You don't have any personal recipes yet.</h3>
+                    <span>Share your own culinary creations! Add a recipe.</span>
+                </div>
             </div>
         </div>
     );

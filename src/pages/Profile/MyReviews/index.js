@@ -8,8 +8,11 @@ const MyReviews= () => {
     return(
         <div>
             <ProfileControlPanel/>
-            <div className="aboutMe">
-                My Reviews
+            <div className="wrap">
+                <div className="textContent">
+                    <h3>Keep track of your reviews and ratings!</h3>
+                    <span>When you finish a recipe, be sure to rate and review it!</span>
+                </div>
             </div>
         </div>
     );
