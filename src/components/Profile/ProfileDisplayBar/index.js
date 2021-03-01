@@ -9,9 +9,9 @@ const ProfileDisplayBar = () => {
                 <div className="userDisplayInfo">
                     <span>DisplayName</span>
                     <ul>
-                        <li><span><i className="fas fa-user-friends"></i></span>0</li>
-                        <li><i className="fas fa-heart"></i>0</li>
-                        <li><i className="fas fa-utensils"></i>0</li>
+                        <li><i className="fas fa-user-friends"></i> 0</li>
+                        <li><i className="fas fa-heart"></i> 0</li>
+                        <li><i className="fas fa-utensils"></i> 0</li>
                     </ul>
                 </div>
             </div>

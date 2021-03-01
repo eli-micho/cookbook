@@ -16,7 +16,8 @@ class ProfileSearchBar extends Component {
 
                 <div className="searchBox">
                     <input type="text" name="searchInput" placeholder="Find a recipe" />
-                    <i className="fas fa-search"></i>
+                    <span className="ingredientSearch">Ingredient Search</span>
+                    <span className="searchIcon"><i className="fas fa-search"></i></span>
                 </div>
                 
                 <div className="userActions">
@@ -29,7 +30,7 @@ class ProfileSearchBar extends Component {
                 <div className="userProfileBtn">
                     <span className="userIcon">Icon</span>
                     <span>Display Name</span>
-                    <span></span>
+                    <span className="moreBtn"><i className="fa fa-chevron-down"></i></span>
                 </div>
             </div>
         )
